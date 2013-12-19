@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/orangr"
+        android:drawableLeft="@drawable/rect"
+        android:drawablePadding="@dimen/activity_vertical_margin"
+        android:gravity="center_vertical"
+        android:height="48dp"
+        android:text="@string/doklad"
+        android:textColor="@color/wait"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView1"
+        android:background="@drawable/ic_back"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="16dp"
+            android:height="90dp"
+            android:text="@string/effekt_buisness"
+            android:textColor="@color/wait"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="20dp"
+            android:text="@string/zal_vostok"
+            android:textColor="@color/wait"
+            android:textSize="10sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#5000"
+            android:layoutMode="clipBounds"
+            android:visibility="visible" >
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_foto" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/imageView1"
+                android:text="@string/artemov"
+                android:textColor="@color/wait"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/imageView1"
+                android:layout_marginBottom="4dp"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/imageView1"
+                android:text="@string/svaznoi"
+                android:textColor="@color/wait"
+                android:textSize="10sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button1"
+        style="@style/myButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:minHeight="55dp"
+        android:onClick="onClickSend"
+        android:text="@string/send_question"
+        android:textSize="22sp" />
+
+    <TextView
+        android:id="@+id/tvTextOut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/button1"
+        android:layout_alignLeft="@+id/button1"
+        android:layout_alignRight="@+id/button1"
+        android:layout_below="@+id/linearLayout1"
+        android:layout_marginBottom="16dp"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="@string/vopros" />
+
+</RelativeLayout>
